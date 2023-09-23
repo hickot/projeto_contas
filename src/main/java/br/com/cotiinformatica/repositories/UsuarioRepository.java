@@ -2,6 +2,7 @@ package br.com.cotiinformatica.repositories;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
+import java.sql.ResultSet;
 
 import br.com.cotiinformatica.entities.Usuario;
 import br.com.cotiinformatica.factories.ConnectionFactory;
@@ -30,5 +31,38 @@ public class UsuarioRepository {
         //fechando a conexão com o banco de dados
         connection.close();
 	}
-
+	
+	public Usuario find(String email) throws Exception {
+		
+		//abrir conexão com o banco de dados
+		Connection connection = ConnectionFactory.getConnection();
+		
+		//escrevendo a query SQL que será executado no banco de dados
+		String query = "select * from usuario where email = ?";
+		
+		//executando a query sql
+		PreparedStatement preparedStatement = connection.prepareStatement(query);
+		
+		//Defina os valores dos parâmetros
+        preparedStatement.setString(1, email);
+        
+        ResultSet resultSet = preparedStatement.executeQuery();
+        
+        Usuario usuario = null;
+        
+        //verificando se algum registro foi obtido do banco
+        if (resultSet.next()) {
+        	
+        	usuario = new Usuario();  //instanciando
+        	usuario.setIdUsuario(resultSet.getInt("idusuario"));
+        	usuario.setNome(resultSet.getString("nome"));
+        	usuario.setEmail(resultSet.getString("email"));
+        }
+        
+        //fechando a conexão
+        connection.close();
+        
+        //retornando o usuário
+        return usuario;
+	}
 }
