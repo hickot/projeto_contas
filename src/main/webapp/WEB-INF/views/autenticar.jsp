@@ -31,7 +31,11 @@
 						<p>Entre com as suas credenciais de acesso:</p>
 					</div>
 					
-					<form id="formAutenticar">
+					<div class="text-center text-danger">
+						<h3>${mensagem_erro}</h3>
+					</div>
+					
+					<form id="formAutenticar" method="post" action="autenticar-post">
 						<div class="mb-2">
 							<label>E-mail de acesso:</label>
 							<input type="text" 
