@@ -1,16 +1,16 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%>
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+    pageEncoding="ISO-8859-1"%>
 <!DOCTYPE html>
 <html>
 <head>
-<meta charset="UTF-8">
+<meta charset="ISO-8859-1">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Projeto Contas - Dashboard</title>
 
 <!-- add o favicon -->
 <link rel="shortcut icon" type="image/x-icon" href="${pageContext.request.contextPath}/static/logo-coti-informatica.ico" />
 
-<!-- ReferÃªncia da folha de estilos CSS do bootstrap -->
+<!-- Referência da folha de estilos CSS do bootstrap -->
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
 
 </head>
@@ -23,7 +23,7 @@
 		<h4>Dashboard principal</h4>
 	</div>
 
-	<!-- ReferÃªncia do arquivo JS do bootstrap -->
+	<!-- Referência do arquivo JS do bootstrap -->
 	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 
 </body>

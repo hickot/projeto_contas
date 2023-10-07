@@ -1,4 +1,5 @@
 eclipse.preferences.version=1
+encoding//src/main/webapp/WEB-INF/views/admin/cadastro-contas.jsp=ISO-8859-1
 encoding//src/main/webapp/resources/js/autenticar.js=UTF-8
 encoding//src/main/webapp/resources/js/criar-usuario.js=UTF-8
 encoding//src/main/webapp/resources/js/recuperar-senha.js=UTF-8
