@@ -45,7 +45,7 @@ public class ContaRepository {
 		Connection connection = ConnectionFactory.getConnection();
 		
 		//escrevendo a query SQL que será executado no banco de dados
-		String query = "update conta set nome=?, date=?, valor=?, tipo=?, descricao=? where idconta=?";
+		String query = "update conta set nome=?, data=?, valor=?, tipo=?, descricao=? where idconta=?";
 		
 		//executando a query sql
 		PreparedStatement preparedStatement = connection.prepareStatement(query);

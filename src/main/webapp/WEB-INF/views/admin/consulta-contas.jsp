@@ -99,7 +99,7 @@ pageEncoding="ISO-8859-1"%>
 							<td>${conta.nome}</td>
 							<td>${conta.descricao}</td>
 							<td>
-								<a href="#" class="btn btn-sm btn-outline-primary me-2">Editar</a>
+								<a href="/projeto_contas/admin/edicao-contas?id=${conta.idConta}" class="btn btn-sm btn-outline-primary me-2">Editar</a>
 								<a href="/projeto_contas/admin/excluir-conta?id=${conta.idConta}&dataMin=${dataMin}&dataFim=${dataFim}" onclick="return confirm('Deseja excluir o registro ${conta.nome}?')" class="btn btn-sm btn-outline-danger">Excluir</a>
 							</td>
 						</tr>
